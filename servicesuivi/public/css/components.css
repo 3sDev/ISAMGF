@@ -1,0 +1,34 @@
+.btn i {
+    color: white;
+}
+
+.form-control {
+    width: 50%;
+}
+
+.titreDemande {
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(26, 107, 80);
+}
+
+.demandEnvoyee {
+    background-color: #d9f00e85;
+    font-weight: 700;
+    padding: 5px 12px;
+    border-radius: 10%;
+}
+
+.demandEncours {
+    background-color: #f0550e8c;
+    font-weight: 700;
+    padding: 5px 12px;
+    border-radius: 10%;
+}
+
+.demandTraitee {
+    background-color: #43f00e83;
+    font-weight: 700;
+    padding: 5px 12px;
+    border-radius: 10%;
+}

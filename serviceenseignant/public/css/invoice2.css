@@ -1,0 +1,223 @@
+body {
+    background: rgb(255, 255, 255);
+    /* font-size:0.9em !important; */
+    font-family: 'Times New Roman', Times, serif !important;
+}
+
+.invoice {
+    width: 100% !important;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
+    padding-top: 15px;
+    padding-bottom: 20px;
+}
+
+.invoice .invoice-header {
+    padding: 0px;
+}
+
+.invoice .invoice-header h1 {
+    margin: 0;
+}
+
+.invoice .invoice-header .media .media-body {
+    font-size: 0.9em;
+    padding-top: 3%;
+}
+
+.invoice .invoice-body {
+    border-radius: 10px;
+    padding: 25px;
+    background: #FFF;
+}
+
+.logo {
+    width: 100px;
+    height: 85px;
+    border-radius: 10px;
+}
+
+.logo2 {
+    width: 120px;
+    height: 85px;
+    border-radius: 10px;
+}
+
+.dl-horizontal {
+    margin: 0;
+}
+
+.dl-horizontal dt {
+    float: left;
+    width: 150px;
+    overflow: hidden;
+    clear: left;
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.dl-horizontal dd {
+    margin-left: 90px;
+}
+
+.rowamount {
+    padding-top: 15px !important;
+}
+
+.rowtotal {
+    font-size: 1.3em;
+}
+
+.colfix {
+    width: 12%;
+}
+
+.mono {
+    font-family: monospace;
+}
+
+
+/*     Download Button       */
+
+.btn-primary {
+    color: #fff;
+    background-color: #2196f3;
+    border: none;
+    margin-bottom: 5%;
+}
+
+.btn-labeled>b {
+    position: absolute;
+    top: -1px;
+    background-color: blue;
+    display: block;
+    line-height: 1;
+    padding: .62503rem
+}
+
+.titreDemande h3 {
+    width: 40%;
+    margin: 5% 0%;
+    padding: 2% 0%;
+    border-top: 2px solid rgb(36, 36, 36);
+    border-bottom: 2px solid rgb(36, 36, 36);
+}
+
+label {
+    font-weight: 700 !important;
+    font-size: 15px !important;
+}
+
+span {
+    font-size: 15px !important;
+}
+
+label {
+    font-weight: 700 !important;
+    font-size: 15px !important;
+}
+
+p {
+    font-weight: 700 !important;
+    font-size: 15px !important;
+}
+
+h5 {
+    font-size: 15.5px !important;
+}
+
+h4 {
+    font-weight: bold !important;
+    font-size: 18px !important;
+}
+
+
+/*************************************************/
+
+@media print {
+    #printPageButton {
+        display: none;
+    }
+    #printPageButton2 {
+        display: none;
+    }
+}
+
+.headerText {
+    font-size: 11px !important;
+    font-weight: bold;
+}
+
+.headerText1 {
+    top: 10px !important;
+    font-size: 11px !important;
+    font-weight: bold;
+}
+
+td img {
+    margin-bottom: 10px !important;
+}
+
+.signature {
+    float: right !important;
+}
+
+.direction {
+    margin: 10% 0% 38% 0%;
+}
+
+.signatureAr {
+    float: left !important;
+    margin-top: 1%;
+}
+
+.directionAr {
+    margin: 10% 0% 58% 0%;
+}
+
+.invoice-footer {
+    padding: 15px;
+    font-size: 0.9em;
+    text-align: center;
+    color: rgb(107, 107, 107);
+    margin-top: 50px !important;
+    top: 50px !important;
+}
+
+.hrfooter {
+    border-top: 2px solid rgb(36, 36, 36);
+}
+
+label {
+    padding-bottom: -10px !important;
+}
+
+.labelAr label {
+    padding-bottom: 10px !important;
+    font-size: 18px !important;
+}
+
+.labelAr span {
+    font-size: 18px !important;
+}
+
+.titreDemandeChangeCompteB {
+    font-size: 22px !important;
+    text-align: right !important;
+}
+
+.sujetDemande {
+    font-size: 22px !important;
+    font-weight: bold !important;
+    color: black !important;
+    border-bottom: 2px solid black;
+}
+
+.spanAttribut {
+    font-size: 22px !important;
+}
+
+.documents {
+    text-align: right !important;
+}

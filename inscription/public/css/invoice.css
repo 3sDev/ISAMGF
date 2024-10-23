@@ -1,0 +1,135 @@
+body {
+    background: rgb(255, 255, 255);
+    /* font-size:0.9em !important; */
+    font-family: system-ui !important;
+}
+
+.invoice {
+    width: 770px !important;
+    margin: 20px auto;
+    background: rgb(255, 255, 255);
+    border: 0px solid #ccc;
+}
+
+.invoice .invoice-header {
+    padding: 0px;
+}
+
+.invoice .invoice-header h1 {
+    margin: 0;
+}
+
+.invoice .invoice-header .media .media-body {
+    font-size: 0.9em;
+    padding-top: 3%;
+}
+
+.invoice .invoice-body {
+    border-radius: 10px;
+    padding: 25px;
+    background: #FFF;
+}
+
+.invoice .invoice-footer {
+    padding: 15px;
+    font-size: 0.9em;
+    text-align: center;
+    color: rgb(107, 107, 107);
+    margin-top: 100px !important;
+}
+
+.logo {
+    width: 100px;
+    height: 85px;
+    border-radius: 10px;
+}
+
+.logo2 {
+    width: 120px;
+    height: 85px;
+    border-radius: 10px;
+}
+
+.dl-horizontal {
+    margin: 0;
+}
+
+.dl-horizontal dt {
+    float: left;
+    width: 150px;
+    overflow: hidden;
+    clear: left;
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.dl-horizontal dd {
+    margin-left: 90px;
+}
+
+.rowamount {
+    padding-top: 15px !important;
+}
+
+.rowtotal {
+    font-size: 1.3em;
+}
+
+.colfix {
+    width: 12%;
+}
+
+.mono {
+    font-family: monospace;
+}
+
+
+/*     Download Button       */
+
+.btn-primary {
+    color: #fff;
+    background-color: #2196f3;
+    border: none;
+    margin-bottom: 5%;
+}
+
+.btn-labeled>b {
+    position: absolute;
+    top: -1px;
+    background-color: blue;
+    display: block;
+    line-height: 1;
+    padding: .62503rem
+}
+
+.titreDemande h3 {
+    margin: 9% 0%;
+}
+
+label {
+    font-weight: 700 !important;
+    font-size: 15px !important;
+}
+
+span {
+    font-size: 15px !important;
+}
+
+label {
+    font-weight: 700 !important;
+    font-size: 15px !important;
+}
+
+p {
+    font-weight: 700 !important;
+    font-size: 15px !important;
+}
+
+hr {
+    color: #2196f3
+}
+
+.direction {
+    margin: 10% 0% 25% 0%;
+}

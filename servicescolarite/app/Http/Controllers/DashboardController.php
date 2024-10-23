@@ -1,0 +1,138 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Http;
+
+class DashboardController extends Controller
+{
+    use Services\MyTrait;
+    use Services\ConvertBase64;
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        $idAdmin  = Auth::user()->id;
+
+        $response = Http::get($this->getUrlServer().'/all-agenda-users/'.$idAdmin);
+        $agenda = json_decode($response);   
+        return view('dashboard', ['agenda' => $agenda]);
+    }
+
+    public function countIndicator()
+    {
+        $idAdmin  = Auth::user()->id;
+        $response = Http::get($this->getUrlServer().'/getAllNotesByIdAdmin/'.$idAdmin);
+        $agenda = json_decode($response);    
+
+        //Statistic Students
+        $response0 = Http::get($this->getUrlServer().'/getCountRAllStudentsByStatut/0');
+        $studentDesactive = json_decode($response0); 
+        $response1 = Http::get($this->getUrlServer().'/getCountRAllStudentsByStatut/1');
+        $studentActive = json_decode($response1);  
+        $response2 = Http::get($this->getUrlServer().'/getCountRAllStudentsByStatut/2');
+        $studentNoActive = json_decode($response2);  
+        $response3 = Http::get($this->getUrlServer().'/getCountRAllStudentsByStatut/3');
+        $studentRetrait = json_decode($response3); 
+        $response4 = Http::get($this->getUrlServer().'/getCountRAllStudentsByStatut/4');
+        $studentMutation = json_decode($response4);
+        $response5 = Http::get($this->getUrlServer().'/countAllStudents');
+        $allStudents = json_decode($response5); 
+        //Statistic Demandes Students
+        $response6 = Http::get($this->getUrlServer().'/getCountDemandesStudentsByStatut/En cours');
+        $studentDemandeStatut = json_decode($response6); 
+        $response7 = Http::get($this->getUrlServer().'/countAllDemandesStudents');
+        $studentAllDemandes = json_decode($response7);
+        //Statistic Reclamations Students
+        $response8 = Http::get($this->getUrlServer().'/getCountReclamationsStudentsByStatut/En cours');
+        $studentReclamationStatut = json_decode($response8); 
+        $response9 = Http::get($this->getUrlServer().'/countAllReclamationsStudents');
+        $studentAllReclamations = json_decode($response9); 
+        //Statistic Rattrapages Students
+        $response10 = Http::get($this->getUrlServer().'/getCountRattrapagesTeachersByStatut');
+        $rattrapageEncours = json_decode($response10); 
+        $response11 = Http::get($this->getUrlServer().'/countAllRattrapagesTeachers');
+        $allRattrapages = json_decode($response11); 
+        //Statistic Absences Today Students
+        $response12 = Http::get($this->getUrlServer().'/getCountAbsenceTodayStudent');
+        $attendanceStudent = json_decode($response12);
+
+        return view('dashboard', ['studentActive' => $studentActive, 'studentNoActive' => $studentNoActive, 
+        'studentRetrait' => $studentRetrait, 'studentMutation' => $studentMutation, 'allStudents' => $allStudents, 
+        'agenda' => $agenda, 'studentReclamationStatut' => $studentReclamationStatut, 'studentAllReclamations' => $studentAllReclamations, 
+        'studentDemandeStatut' => $studentDemandeStatut, 'studentAllDemandes' => $studentAllDemandes,
+        'rattrapageEncours' => $rattrapageEncours, 'allRattrapages' => $allRattrapages, 'attendanceStudent' => $attendanceStudent, 
+        'studentDesactive' => $studentDesactive]);
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        //
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        //
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        //
+    }
+}
